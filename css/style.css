@@ -17,6 +17,7 @@
   flex-grow: 1;
 }
 
+/* ASIDE */
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -29,27 +30,46 @@
   background: black;
 }
 
-.account {
-  height: 50px;
+.logo {
+  height: 80px;
+  width: 100%;
   background: red;
 }
 
+.account {
+  height: 50px;
+  background: grey;
+}
+
+/* CENTRAL WINDOW */
 .window {
   position: relative;
   flex-grow: 1;
   background: green;
 }
 
-.content-menu {
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   position: absolute;
   top: 0;
   left:0;
   height: 80px;
   width: 100%;
+  padding: 20px;
   background: rgba(0, 0, 0, .5);
   z-index: 1;
 }
 
+.cta {
+  height: 30px;
+  width: 200px;
+  border-radius: 50px;
+  background: orange;
+}
+
+/* SCROLLABLE */
 .scrollable {
   position: absolute;
   top: 0;
@@ -66,14 +86,44 @@
   background: pink;
 }
 
+/* CATEGORIES */
+.categories {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
 .category {
-  height: 200px;
+  height: 250px;
   width: 200px;
   margin: 70px 0;
+  background: #fff;
+}
+
+.image {
+  height: 200px;
+  height: 200px;
   background: #1ed760;
 }
 
+/* FOOTER */
 #player {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   height: 100px;
+  padding: 20px;
   background: #222326;
+}
+
+.info {
+  height: 40px;
+  flex-basis: 200px;
+  margin: 0 5px;
+  background: grey;
+}
+
+.play {
+  flex-grow: 1;
 }
