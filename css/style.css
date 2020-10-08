@@ -1,0 +1,79 @@
+/* GENERAL STYLE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#main-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 230px;
+  background: green;
+}
+
+.nav {
+  flex-grow: 1;
+  background: black;
+}
+
+.account {
+  height: 50px;
+  background: red;
+}
+
+.window {
+  position: relative;
+  flex-grow: 1;
+  background: green;
+}
+
+.content-menu {
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 80px;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 1;
+}
+
+.scrollable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 80px;
+  overflow-y: auto;
+  background: #2d46b9;
+}
+
+.menu {
+  height: 80px;
+  background: pink;
+}
+
+.category {
+  height: 200px;
+  width: 200px;
+  margin: 70px 0;
+  background: #1ed760;
+}
+
+#player {
+  height: 100px;
+  background: #222326;
+}
