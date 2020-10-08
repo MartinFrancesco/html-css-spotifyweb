@@ -95,13 +95,12 @@
 
 .category {
   height: 250px;
-  width: 200px;
+  flex-basis: 200px;
   margin: 70px 0;
   background: #fff;
 }
 
 .image {
-  height: 200px;
   height: 200px;
   background: #1ed760;
 }
@@ -126,4 +125,24 @@
 
 .play {
   flex-grow: 1;
+}
+
+@media screen and (max-width: 768px) {
+
+  .sidebar {
+    flex-basis: 130px;
+  }
+
+  .top-bar {
+    justify-content: center;
+  }
+
+  .scrollable {
+    padding: 80px 10px;
+  }
+
+  .categories {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
