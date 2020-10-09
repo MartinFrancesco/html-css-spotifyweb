@@ -5,6 +5,43 @@
   box-sizing: border-box;
 }
 
+body {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ a{
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+/* UTILITIES */
+.text-center {
+  text-align: center;
+}
+
+/* Typography */
+h6 {
+  margin-bottom: 7px;
+}
+
+p {
+  font-size: 11px;
+  color: grey;
+}
+
+/* Margins */
+.mb-15 {
+  margin-bottom: 15px;
+}
+
 /* Layout */
 #app {
   display: flex;
@@ -25,15 +62,27 @@
   background: green;
 }
 
-.nav {
+.navbar {
   flex-grow: 1;
+  padding: 25px;
   background: black;
 }
 
-.logo {
+.navbar-logo {
   height: 80px;
   width: 100%;
-  background: red;
+}
+
+.nav {
+  height: 30px;
+}
+
+.navbar-nav .nav a img {
+  height: 100%;
+}
+
+.navbar-nav .nav a span {
+  line-height: 30px;
 }
 
 .account {
@@ -63,10 +112,12 @@
 }
 
 .cta {
-  height: 30px;
-  width: 200px;
+  height: 40px;
+  padding: 10px 40px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 2px solid white;
   border-radius: 50px;
-  background: orange;
 }
 
 /* SCROLLABLE */
@@ -76,33 +127,60 @@
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 80px;
   overflow-y: auto;
-  background: #2d46b9;
+  background: #141518;
 }
 
 .menu {
-  height: 80px;
-  background: pink;
+  padding-top: 80px;
+}
+
+.menu ul li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: grey;
+}
+
+.menu ul li a:hover {
+  color: #fff;
+}
+
+.menu ul li {
+  display: inline-block;
+  padding: 14px;
 }
 
 /* CATEGORIES */
+.title {
+  line-height: 25px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
 .categories {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-bottom: 40px;
 }
 
 .category {
+  text-align: center;
   height: 250px;
   flex-basis: 200px;
-  margin: 70px 0;
-  background: #fff;
+  padding-left: 10px;
 }
 
 .image {
-  height: 200px;
-  background: #1ed760;
+  height: 190px;
+}
+
+.image img {
+  max-width: 100%;
+}
+
+.circle img {
+  border-radius: 50%;
 }
 
 /* FOOTER */
