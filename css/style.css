@@ -71,7 +71,7 @@ p {
   flex-direction: column;
   flex-basis: 230px;
   font-size: 14px;
-  background: green;
+  background: black;
 }
 
 .navbar {
@@ -84,6 +84,17 @@ p {
 .navbar-logo {
   height: 80px;
   padding: 15px 0;
+}
+
+.navbar-logo .desktop {
+  visibility: visible;
+}
+
+.navbar-logo .mobile {
+  position: relative;
+  top: -15px;
+  max-width: 30px;
+  visibility: hidden;
 }
 
 .navbar-nav ul li {
@@ -466,11 +477,13 @@ footer.player .box-left *:hover {
     margin-left: 10px;
 }
 
-
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
 
+/* General layout */
   .sidebar {
-    flex-basis: 130px;
+    flex-basis: 50px;
+    align-items: center;
   }
 
   .top-bar {
@@ -490,7 +503,43 @@ footer.player .box-left *:hover {
     text-align: center;
   }
 
+/* Sidebar */
+  .navbar .navbar-logo .desktop {
+    visibility: hidden;
+  }
+
+  .navbar .navbar-logo .mobile {
+    visibility: visible;
+  }
+
   .navbar-nav h4, .navbar-nav .playlist, .account .account-bottom h5, .account .account-top p, .account hr {
     display: none;
   }
+
+  .account-top, .account-bottom {
+    justify-content: center;
+  }
+
+  .icon {
+    padding: 0;
+  }
+
+  .account i {
+    margin: 0;
+  }
+
+/* Main-Menu */
+  .menu {
+    padding-top: 0;
+  }
+
+  .menu ul li {
+    display: block;
+  }
+
+/* Scrollable */
+  .category {
+    margin: 40px 0;
+  }
+
 }
