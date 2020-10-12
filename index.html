@@ -5,6 +5,9 @@
     <title>Spotify Web</title>
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -23,28 +26,86 @@
               <div class="navbar-logo">
                 <img src="./img/logo.svg" alt="Spotify-logo">
               </div>
-              <div class="navbar-nav">
-                <div class="nav">
-                  <a href="#"><img src="./img/home.svg" alt=""><span>Home</span></a>
-                </div>
-              </div>
 
+              <div class="navbar-nav">
+                <ul class="mb-15">
+                  <li>
+                    <a href="#"><img class="icon" src="./img/home.svg" alt=""><h4>Home</h4></a>
+                  </li>
+                  <li>
+                    <a href="#"><img class="icon" src="./img/search.svg" alt=""><h4>Cerca</h4></a>
+                  </li>
+                  <li>
+                    <a href="#"><img class="icon" src="./img/libreria.svg" alt=""><h4>La tua libreria</h4></a>
+                  </li>
+                </ul>
+
+                <h4 class="uppercase">Playlist</h4>
+                <ul class="playlist">
+                  <li>
+                    <a href="#">
+                      <div class="new-playlist text-center">
+                        <i class="fas fa-plus"></i>
+                      </div>Crea una Playlist
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Nome Playlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Nome Playlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Nome Playlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Nome Playlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Nome Playlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Nome Playlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Nome Playlist</a>
+                  </li>
+                </ul>
+              </div>
             </nav>
+
             <!-- Account -->
             <div class="account">
+              <a href="#">
+                <div class="account-top">
+                  <i class="fas fa-arrow-circle-down"></i>
+                  <p>Installa app</p>
+                </div>
+              </a>
+
+              <hr>
+
+              <a href="#">
+                <div class="account-bottom">
+                  <i class="fas fa-user-circle"></i>
+                  <h5 class="white">John Doe</h5>
+                </div>
+              </a>
             </div>
           </div>
 
           <!-- Central Window -->
           <div class="window">
             <div class="top-bar">
-              <div class="cta text-center">
-                Effettua l'upgrade
-              </div>
+              <a href="#">
+                <div class="cta text-center uppercase white">
+                  Effettua l'upgrade
+                </div>
+              </a>
             </div>
 
             <div class="scrollable">
-              <div class="menu text-center">
+              <div class="menu text-center uppercase">
                 <ul>
                   <li>
                     <a href="#">In evidenza</a>
@@ -70,7 +131,7 @@
               <!-- Categories -->
               <!-- Section One -->
               <div class="title">
-                <h3>Recently played</h3>
+                <h3 id="first-title-js"></h3>
               </div>
               <div class="categories">
 
@@ -132,14 +193,14 @@
               <div class="categories">
                 <div class="category">
                   <div class="image mb-15">
-                    <img src="./img/metal_lifting.jpg" alt="">
+                    <img src="./img/radar.jpeg" alt="">
                   </div>
                   <h5>Release Radar</h5>
                 </div>
 
                 <div class="category">
                   <div class="image mb-15">
-                    <img src="./img/stranger.jpeg" alt="">
+                    <img src="./img/mixdaily.jpeg" alt="">
                   </div>
                   <h5>Daily Mix 1</h5>
                 </div>
@@ -154,14 +215,14 @@
               <div class="categories">
                 <div class="category">
                   <div class="image circle mb-15">
-                    <img src="./img/metal_lifting.jpg" alt="">
+                    <img src="./img/young.jpeg" alt="">
                   </div>
                   <h5>Lana del Rey</h5>
                 </div>
 
                 <div class="category">
                   <div class="image circle mb-15">
-                    <img src="./img/stranger.jpeg" alt="">
+                    <img src="./img/einaudi.jpeg" alt="">
                   </div>
                   <h5>Ludovico Einaudi</h5>
                 </div>
@@ -170,20 +231,59 @@
           </div>
 
         </main>
-
         <!-- FOOTER -->
-        <footer id="player">
-          <div class="info">
-          </div>
+        <footer class="player">
 
-          <div class="info play">
-          </div>
+            <!-- Box Sinistro -->
+            <div class="box-left">
+                <img src="./img/sinister.jpeg" alt="">
+                <h5>Sinister</h5>
+                <p>Nome Brano</p>
+                <i class="far fa-heart"></i>
+                <i class="far fa-folder"></i>
+            </div>
 
-          <div class="info">
-          </div>
+            <!-- Box Centrale -->
+            <div class="box-center">
+                <div class="player-icons">
+                    <ul class="player-buttons">
+                        <li><i class="fas fa-random"></i></li>
+                        <li><i class="fas fa-step-backward"></i></li>
+                        <li><i class="far fa-play-circle"></i></li>
+                        <li><i class="fas fa-step-forward"></i></li>
+                        <li><i class="fas fa-undo-alt"></i></li>
+                    </ul>
+                <div class="player-bar">
+                    <span>0:25</span>
 
+                    <!-- Bar Utility -->
+                    <div class="base-bar">
+                        <div class="fill-bar">
+                        </div>
+                    </div>
+
+                    <span>4:35</span>
+                </div>
+                </div>
+            </div>
+            <div class="box-right">
+                <ul class="right-player">
+                    <li><i class="fas fa-list"></i></li>
+                    <li><i class="fas fa-desktop"></i></li>
+                    <li><i class="fas fa-volume-up"></i></li>
+                </ul>
+
+                <!-- Bar Utility -->
+                <div class="base-bar">
+                    <div class="fill-bar">
+                    </div>
+                </div>
+            </div>
         </footer>
+    </div>
 
-      </div>
-    </body>
-    </html>
+    <script src="./js/javascript.js"></script>
+
+
+  </body>
+</html>
